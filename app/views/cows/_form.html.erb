@@ -1,0 +1,11 @@
+<%= form_for @cow do |f| %>
+
+  <div class="field">
+    <%= f.label :url, "Photo Url" %>
+    <%= f.text_field :url %>
+  </div>
+
+  <br>
+  
+  <%= f.submit %>
+<% end %>

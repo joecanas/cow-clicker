@@ -1,0 +1,12 @@
+<h1>One Cow Among Many</h1>
+
+<h2>ID: <%= @cow.id %></h2>
+<img src="<%= @cow.url %>"><br>
+<p>Clicks: <%= @cow.clicks %></p>
+
+<%= button_to 'Like', upvote_cow_path(@cow.id), method: "get" %>
+
+<br><br>
+
+<%= button_to "Edit", edit_cow_path, method: "get" %>
+<%= button_to "Delete", cow_path, method: "delete" %>

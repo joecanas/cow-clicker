@@ -1,0 +1,14 @@
+<h1>Our Cows</h1>
+
+<% if not @cows %>
+  No cows yet
+<% else %>
+  <% @cows.each do |cow| %>
+    <div class="cow">
+      <h2>ID: <%= link_to cow.id, cow_path(cow) %></h2>
+      <a href="<%= cow_path(cow) %>"><img src="<%= cow.url %>"></a><br>
+      <p class="clicks">Clicks: <%= cow.clicks %></p>
+    </div>
+  <% end %>
+<% end %>
+<p><%= button_to "Add a cow", new_cow_path, method: "get" %></p>

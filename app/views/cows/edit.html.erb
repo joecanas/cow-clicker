@@ -1,0 +1,7 @@
+<h1>Edit cow</h1>
+
+<h2>ID: <%= @cow.id %></h2>
+<a href="<%= cow_path(@cow) %>"><img src="<%= @cow.url %>"></a><br>
+<p>Clicks: <%= @cow.clicks %></p>
+
+<%= render 'form' %>
