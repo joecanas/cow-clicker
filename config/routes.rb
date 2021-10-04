@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   resources :cows
-  root '#index'
-  get 'index'
-  get 'new'
+  root 'cows#index'
+  get 'cows/index'
+  get 'cows/new'
 
   resources :cows do
     member do
